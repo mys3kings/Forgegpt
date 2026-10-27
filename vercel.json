@@ -1,0 +1,11 @@
+{
+  "buildCommand": "pnpm --filter @workspace/forgesite build",
+  "outputDirectory": "artifacts/forgesite/dist/public",
+  "installCommand": "pnpm install --frozen-lockfile",
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
+  ]
+}
