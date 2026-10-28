@@ -1,7 +1,9 @@
 {
   "services": {
     "api-server": {
-      "root": "artifacts/api-server"
+      "root": "artifacts/api-server",
+      "entrypoint": "src/index.ts",
+      "framework": "express"
     },
     "forgesite": {
       "root": "artifacts/forgesite",
