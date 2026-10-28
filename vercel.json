@@ -1,11 +1,15 @@
 {
-  "buildCommand": "pnpm --filter @workspace/forgesite build",
-  "outputDirectory": "artifacts/forgesite/dist/public",
-  "installCommand": "pnpm install --frozen-lockfile",
-  "rewrites": [
-    {
-      "source": "/(.*)",
-      "destination": "/index.html"
+  "services": {
+    "api-server": {
+      "root": "artifacts/api-server"
+    },
+    "forgesite": {
+      "root": "artifacts/forgesite",
+      "framework": "vite"
+    },
+    "mockup-sandbox": {
+      "root": "artifacts/mockup-sandbox",
+      "framework": "vite"
     }
-  ]
+  }
 }
